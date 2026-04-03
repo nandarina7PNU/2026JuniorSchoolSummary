@@ -166,7 +166,8 @@
               "title": "Chapter 1 - Analysis of Algorithms 의 개요"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -186,6 +187,7 @@
   },
   "active": "38fa91595315ebb4",
   "lastOpenFiles": [
+    "Pasted image 20260403224422.png",
     "Chapter 1 - Analysis of Algorithms.md"
   ]
 }
