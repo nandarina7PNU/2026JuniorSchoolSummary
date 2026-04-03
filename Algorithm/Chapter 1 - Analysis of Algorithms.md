@@ -22,8 +22,8 @@
 
 ### 순차 탐색
 
-Problem : n개의 원소를 가진 배열 S에 key x는 존재하는가?
-Inputs : 정수 n개, 1부터 n까지 배열의 위치에 key값이 대응됨(index)
+Problem : n개의 원소를 가진 배열 S에 key x는 존재하는가?  
+Inputs : 정수 n개, 1부터 n까지 배열의 위치에 key값이 대응됨(index)  
 Outputs : 위치, 만약 그 값이 없다면 0을 반환.
 
 C 구현
@@ -86,7 +86,7 @@ int main()
 ```
 ### 행렬 곱셈
 
-2차원 for문으로 r1 x c2 행렬의 모든 원소를 순회
+2차원 for문으로 r1 x c2 행렬의 모든 원소를 순회  
 이 때, 배열 C의 (i, j) 위치는 A배열의 (i, k) 원소 x B배열의 (k, j)의 합으로 나타냄.
 ```C
 #include <stdio.h>
