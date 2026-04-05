@@ -149,7 +149,7 @@ https://www.acmicpc.net/problem/2740
 - 재귀
 - 임의의 k에 대하여 n = 2^k라고 하자. 그러면 비교 횟수는 k=log n이다.
 
-[1] 이진 탐색 시각화
+[1] 이진 탐색 시각화  
 <img src="images/Pasted-image-20260403224422.png" alt="Pasted image 20260403224422" width="216" />
 
 ```C
@@ -221,12 +221,12 @@ int main(){
 https://www.acmicpc.net/problem/2747
 
 그러나 이 재귀 알고리즘은 아래 그림의 모든 노드를 지난다.  
-이 것이 효율적인가? -> 아니요 시간초과 나요
+이 것이 효율적인가? -> 아니요 시간초과 나요  
 ![Pasted image 20260404021555](images/Pasted-image-20260404021555.png)
 #### 반복(Iterative) 구현
 
 배열을 왼쪽부터 오른쪽으로 채우면 아주 효율적이다!  
-F(n) = F(n-1) + F(n-2);
+F(n) = F(n-1) + F(n-2);  
 ![Pasted image 20260404022447](images/Pasted-image-20260404022447.png)
 
 ```C
@@ -312,7 +312,7 @@ function3(A[], n){
 - n개의 항목을 가진 배열이 있고 순차 탐색을 통해 값 x를 찾는다고 하자.
 - 또한 값 x가 동일한 확률로 어떤 위치에서든 있을 수 있다고 가정하자. (즉, 1/n)
 
-순차 탐색의 평균 시간 복잡도 (기대값)
+순차 탐색의 평균 시간 복잡도 (기대값)  
 ![Pasted image 20260405200734](images/Pasted-image-20260405200734.png)
 
 1번 위치에 있으면 1회 비교  
@@ -337,7 +337,7 @@ n을 데이터 셋의 크기라고 하자.
 
 ### 몇 가지 일반적인 시간복잡도 함수의 성장률
 
-n이 증가함에 따라 그래프 사이의 간격이 확실하게 차이난다.
+n이 증가함에 따라 그래프 사이의 간격이 확실하게 차이난다.  
 ![Pasted image 20260405213719](images/Pasted-image-20260405213719.png)
 
 만약 알고리즘의 시간복잡도가 Ɵ(n^2)이고, 데이터 셋이 두배가 된다면 실행 시간에 무슨 변화가 일어날까?  
@@ -350,18 +350,18 @@ n이 증가함에 따라 그래프 사이의 간격이 확실하게 차이난다
 
 정의
 - 주어진 시간복잡도 함수 f(n)에 대하여, O(f(n))은 어떤 함수 g(n)의 집합이다.
-- g(n)은 어떤 양의 실수 c와 음이 아닌 정수 N이 존재하여, N보다 크거나 같은 모든 n에 대하여 아래 식을 만족한다.
-![Pasted image 20260405235148](images/Pasted-image-20260405235148.png)
+- g(n)은 어떤 양의 실수 c와 음이 아닌 정수 N이 존재하여, N보다 크거나 같은 모든 n에 대하여 아래 식을 만족한다.  
+![Pasted image 20260405235148](images/Pasted-image-20260405235148.png)  
 즉, 충분히 큰 n에 대해서는 g(n)은 f(n)의 c배 이하이다. = f(n)이 g(n)의 상한이다.
 #### 예시 1
 
 ##### 5n^2 +3n - 6 ∈ O(n^2)임을 보여라.
-- 우리는 다음 부등식을 만족할 수 있는 c와 N을 찾아야 한다.
-![Pasted image 20260406000419](images/Pasted-image-20260406000419.png)
-- 어떤 값이 c가 될 수 있을까? 우리는 그냥 풀 수도 있고 추측해 볼 수도 있다. 
-- c의 값을 6으로 해보자!
-![Pasted image 20260406000816](images/Pasted-image-20260406000816.png)
-![Pasted image 20260406000840](images/Pasted-image-20260406000840.png)
+- 우리는 다음 부등식을 만족할 수 있는 c와 N을 찾아야 한다.  
+![Pasted image 20260406000419](images/Pasted-image-20260406000419.png)  
+- 어떤 값이 c가 될 수 있을까? 우리는 그냥 풀 수도 있고 추측해 볼 수도 있다.
+- c의 값을 6으로 해보자!  
+![Pasted image 20260406000816](images/Pasted-image-20260406000816.png)  
+![Pasted image 20260406000840](images/Pasted-image-20260406000840.png)  
 따라서 c=6, N=1로 잡으면 모든 n>=1에 대하여 부등식이 성립하므로 5n^2 +3n - 6 ∈ O(n^2)는 증명된다.
 
 ```C++
@@ -410,11 +410,11 @@ int main()
 참고 : 백준 24313 점근적 표기 1
 https://www.acmicpc.net/problem/24313
 ##### 5n^2 +3n - 6 ∈ Ω(n^2) 임을 보여라
-- 위와 마찬가지로 다음 부등식을 만족할 수 있는 c와 N을 찾아야 한다.
-![Pasted image 20260406001709](images/Pasted-image-20260406001709.png)
+- 위와 마찬가지로 다음 부등식을 만족할 수 있는 c와 N을 찾아야 한다.  
+![Pasted image 20260406001709](images/Pasted-image-20260406001709.png)  
 - 어떤 값이 c가 될 수 있을까? 빅오메가는 빅오와는 반대로 하한을 찾아야 한다.
-- 간단히 c의 값을 5로 해보자.
-![Pasted image 20260406003322](images/Pasted-image-20260406003322.png)
+- 간단히 c의 값을 5로 해보자.  
+![Pasted image 20260406003322](images/Pasted-image-20260406003322.png)  
 - 따라서 c=5, N=2로 잡으면 모든 n>=2에 대하여 부등식이 성립하므로 5n^2 +3n - 6 ∈ Ω(n^2)는 증명된다.
 
 5n^2 +3n - 6 ∈ Ω(n^2)와 5n^2 +3n - 6 ∈ Ω(n^2)를 만족하므로 5n^2 +3n - 6 ∈ Θ(n^2)를 만족한다.
@@ -422,26 +422,26 @@ https://www.acmicpc.net/problem/24313
 - 만약 모든 n에 대하여 f(n) > g(n)이어도, f ∈ O(g)일 수 있다.
 - f는 g의 빅오에 속한다. (f ∈ O(g))
 
-보조 정리(Lemma):
-![Pasted image 20260406004253](images/Pasted-image-20260406004253.png)
+보조 정리(Lemma):  
+![Pasted image 20260406004253](images/Pasted-image-20260406004253.png)  
 
-예시 1
-![Pasted image 20260406004341](images/Pasted-image-20260406004341.png)
-![Pasted image 20260406004432](images/Pasted-image-20260406004432.png)
+예시 1  
+![Pasted image 20260406004341](images/Pasted-image-20260406004341.png)  
+![Pasted image 20260406004432](images/Pasted-image-20260406004432.png)  
 - 따라서 g ∈ O(f)이고, f ∉ O(g)이다.
 
-예시 2
-![Pasted image 20260406004622](images/Pasted-image-20260406004622.png)
+예시 2  
+![Pasted image 20260406004622](images/Pasted-image-20260406004622.png)  
 - 따라서 g ∈ O(f)이고, f ∉ O(g)이다.
 - 로피탈 정리에 의해 미분해줌
 ### 빅오, 빅오메가, 빅세타
-2차 함수에 대해 시간복잡도 분류 시각화
-![Pasted image 20260406002701](images/Pasted-image-20260406002701.png)
-![Pasted image 20260406005312](images/Pasted-image-20260406005312.png)
+2차 함수에 대해 시간복잡도 분류 시각화  
+![Pasted image 20260406002701](images/Pasted-image-20260406002701.png)  
+![Pasted image 20260406005312](images/Pasted-image-20260406005312.png)  
 - 모든 2차 함수는 Θ(n^2)에 포함된다. n^2보다 느리거나 같은 함수는 O(n^2)에 포함되며, n^2보다 빠르거나 같은 함수는 Ω(n^2)에 포함된다.
-![Pasted image 20260406005226](images/Pasted-image-20260406005226.png)
+![Pasted image 20260406005226](images/Pasted-image-20260406005226.png)  
 - 그림으로 나타내면 다음과 같다.
-![Pasted image 20260406005240](images/Pasted-image-20260406005240.png)
+![Pasted image 20260406005240](images/Pasted-image-20260406005240.png)  
 - n이 충분히 커지면 n^2+10n은 2n^2아래에 머물게 된다. 즉, 차수가 높은 식이 전체를 지배하게 된다.
 ### 로그
 #### 로그의 정의
@@ -472,10 +472,10 @@ $$
 ### 정리 : log(n!) ∈ Θ(n log n)
 
 #### 하한 증명 : n log n ∈ Ω(n log n)
-![Pasted image 20260406012947](images/Pasted-image-20260406012947.png)
+![Pasted image 20260406012947](images/Pasted-image-20260406012947.png)  
 - n, n-1, n-2, ... 은 n/2보다 크기 때문에 log(n/2) x n/2로 대체할 수 있다.
 #### 상한 증명 : n log n ∈ O(n log n)
-![Pasted image 20260406013152](images/Pasted-image-20260406013152.png)
+![Pasted image 20260406013152](images/Pasted-image-20260406013152.png)  
 - n-1, n-2, ... 1은 n보다 작으므로 다음과 같은 부등식이 만족한다.
 따라서 n log n ∈ Ω(n^2)이고 n log n ∈ O(n^2)이므로 최종적으로 n log n ∈ Θ(n log n)이다.
 # 참고자료
